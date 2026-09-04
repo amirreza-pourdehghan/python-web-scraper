@@ -8,8 +8,7 @@ class CSVStorage:
 
     @staticmethod
     def save(data: list[dict], filename: str) -> None:
-        """This function saves your data in a CSV file with your filename.
-        filename should be without .csv extension."""
+        """This function saves your data in a CSV file with your filename."""
         if filename.endswith(".csv"):
             filename = filename.replace(".csv", "")
 
@@ -27,8 +26,7 @@ class CSVStorage:
 
     @staticmethod
     def load(filename: str) -> list[dict]:
-        """This function loads your data from CSV file that you give filename.
-        filename should be without .csv extension."""
+        """This function loads your data from CSV file that you give filename."""
         if filename.endswith(".csv"):
             filename = filename.replace(".csv", "")
 
