@@ -1,5 +1,7 @@
 """This module is used for creating reports from scraped data."""
 
+from fpdf import FPDF
+
 from core.scraper import Scraper
 
 
@@ -46,3 +48,16 @@ class Reporter:
 
         with open(f"{filename}.txt", "w", encoding="utf-8") as file:
             file.write(report)
+
+    def export_pdf(self, filename: str) -> None:
+        """This function writes the report in a pdf file"""
+        if filename.endswith(".pdf"):
+            filename = filename.replace(".pdf", "")
+
+        report = self.make_report()
+
+        pdf = FPDF()
+        pdf.add_page()
+        pdf.set_font("Arial", size=12)
+        pdf.multi_cell(0, 10, report)
+        pdf.output(f"{filename}.pdf")
