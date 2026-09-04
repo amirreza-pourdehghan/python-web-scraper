@@ -8,8 +8,7 @@ class JSONStorage:
 
     @staticmethod
     def save(data: list[dict], filename: str) -> None:
-        """This function saves your data in a JSON file with your filename.
-        filename should be without .json extension."""
+        """This function saves your data in a JSON file with your filename."""
         if filename.endswith(".json"):
             filename = filename.replace(".json", "")
 
@@ -18,8 +17,7 @@ class JSONStorage:
 
     @staticmethod
     def load(filename: str) -> list[dict] | dict:
-        """This function loads your data from JSON file that you give filename.
-        filename should be without .json extension."""
+        """This function loads your data from JSON file that you give filename."""
         if filename.endswith(".json"):
             filename = filename.replace(".json", "")
 
