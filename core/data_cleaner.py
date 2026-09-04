@@ -12,5 +12,4 @@ class DataCleaner:
     @staticmethod
     def remove_empty(items: list) -> list:
         """This function removes empty items from the list."""
-
         return [item for item in items if item.strip()]
