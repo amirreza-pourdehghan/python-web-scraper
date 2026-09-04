@@ -40,7 +40,8 @@ class Reporter:
         return output
 
     def export_text(self, filename: str) -> None:
-        """This function writes the report in a txt file"""
+        """This function writes the report in a txt file.
+        filename should be without .txt extension."""
         if filename.endswith(".txt"):
             filename = filename.replace(".txt", "")
 
@@ -50,7 +51,8 @@ class Reporter:
             file.write(report)
 
     def export_pdf(self, filename: str) -> None:
-        """This function writes the report in a pdf file"""
+        """This function writes the report in a PDF file.
+        filename should be without .pdf extension."""
         if filename.endswith(".pdf"):
             filename = filename.replace(".pdf", "")
 
